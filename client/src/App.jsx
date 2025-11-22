@@ -1,11 +1,12 @@
 import './App.css'
-import { Login, Cadastro } from './pages/login/Login'
-
+import { Login } from './pages/login/Login'
+import { RouterProvider } from 'react-router-dom'
+import router from './router/Router'
 function App() {
 
   return (
     <>
-      <Cadastro/>
+        <RouterProvider router={router} />
     </>
   )
 }
