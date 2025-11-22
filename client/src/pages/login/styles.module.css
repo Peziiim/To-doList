@@ -39,6 +39,13 @@
     border-bottom: 2px solid white;
     margin-bottom: 1.5rem;
     background-color: transparent;
+    transition: .3s ease-in-out;
+}
+
+.input:focus{
+    outline: none;
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 2px rgb(255, 255, 255, .2);
 }
 
 .title {
