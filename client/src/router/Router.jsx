@@ -7,7 +7,10 @@ import { Login } from "../pages/login/Login.jsx";
 const router = createBrowserRouter ([
         {
             path: "/",
-            element: <Home/>,
+            element:
+                    <ProtectedRoute>
+                         <Home/>
+                    </ProtectedRoute>,
             errorElement: <ErrorPage />
         },
         {

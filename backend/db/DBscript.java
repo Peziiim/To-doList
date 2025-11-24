@@ -17,12 +17,27 @@ public class DBscript {
             Connection conn = DriverManager.getConnection(URL, user, senha);
             Statement statement = conn.createStatement();
             statement.execute("""
-                                CREATE TABLE tasks(
-                                    
+                                CREATE TABLE users(
+                                    id_user int primary key autoincrement,
+                                    nome varchar(80) not null,
+                                    email varchar(250) not null,
+                                    senha varchar(80) not null
                                 )
 
                               """);
                  
+                 
+            statement.execute("""
+                                CREATE TABLE tasks(
+                                    task_id int primary key autoincrement,
+                                    title varchar(80) not null,
+                                    desc varchar(250) not null,
+                                    data_criacao DATETIME not null
+                                    id_user foreign key references()
+                                )
+
+                              """);
+
             
 
 

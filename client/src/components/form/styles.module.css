@@ -1,69 +1,91 @@
 .background {
-    background-image: url("../../assets/login/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+  background-image: url("../../assets/login/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .container {
-    height: auto;
-    min-width: 20vw;
-    margin: 0 auto;
-    background-color: rgba(13, 16, 37, 0.541); 
-    backdrop-filter: blur(10px); 
-    border: 5px solid rgba(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0 0 20px black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
+  height: auto;
+  min-width: 20vw;
+  margin: 0 auto;
+  background-color: rgba(13, 16, 37, 0.541);
+  backdrop-filter: blur(10px);
+  border: 5px solid rgba(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0 0 20px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    padding: 70px 40px 70px 40px;
-    height: 100%;
-    min-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 70px 40px 70px 40px;
+  height: 100%;
+  min-width: 20vw;
 }
 
 .input {
-    width: 85%;
-    height: 32px;
-    padding: 8px;
-    border: 0;
-    border-bottom: 2px solid white;
-    margin-bottom: 1.5rem;
-    background-color: transparent;
-    transition: .3s ease-in-out;
+  width: 85%;
+  height: 32px;
+  padding: 8px;
+  border: 0;
+  border-bottom: 2px solid white;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 
-.input:focus{
-    outline: none;
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 2px rgb(255, 255, 255, .2);
+.input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 2px rgb(255, 255, 255, 0.2);
 }
 
 .title {
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .button {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    align-self: start;
-    margin: 0 0 15px 15px;
-    font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: start;
+  margin: 0 0 15px 15px;
+  font-size: 18px;
+}
+.checkbox input {
+    cursor: pointer;
+}
+
+.passCont {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#password {
+  width: 85%;
+}
+
+.passCont img {
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+  width: 1.5rem;
+  cursor: pointer;
 }
