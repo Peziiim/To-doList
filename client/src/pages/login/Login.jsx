@@ -1,13 +1,9 @@
 import styles from "./styles.module.css"
 import { NavLogin } from "../../components/nav/Nav"
 import Form from "../../components/form/Form"
-import axios from 'axios'
 
 export function Login( props ) {
-  
-    function handleClick(email=null, nome, senha, lembrarSenha) {
-        
-    }
+
 
     return(
         <div className={styles.background}>
@@ -20,6 +16,7 @@ export function Login( props ) {
                    type={props.type}
                    place={props.place}
                    link={props.esqLink}
+                   btnText = {props.btnText}   
                    esq={props.esq} />
         </div>
 

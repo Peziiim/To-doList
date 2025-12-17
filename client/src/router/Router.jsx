@@ -21,7 +21,8 @@ const router = createBrowserRouter ([
                             li={["Cadastre-se", "Sobre Nós"]}
                             rangeIn={2}
                             type={["text", "password"]}
-                            place={["Nome", "Senha"]}                             
+                            place={["Nome ou Email", "Senha"]}
+                            btnText = "Entrar"                          
                             esq="Esqueceu a senha?"
                             esqLink="/recover"/>,
             errorElement: <ErrorPage />
@@ -34,7 +35,8 @@ const router = createBrowserRouter ([
                             li={["Login", "Sobre Nós"]}
                             rangeIn={3}
                             type={["text", "text", "password"]}
-                            place={["Email", "Nome", "Senha"]} 
+                            place={["Email", "Nome", "Senha"]}
+                            btnText = "Cadastrar"        
                             esq="Já tem uma conta?"
                             esqLink="/login"/>,
             errorElement: <ErrorPage />
