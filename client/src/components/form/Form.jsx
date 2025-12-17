@@ -2,11 +2,12 @@ import styles from "./styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import eye from "../../assets/login/eye.svg";
 import eyeSlash from "../../assets/login/eye-slash.svg";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../router/AuthContext";
 
 export default function Form(props) {
+   
   const inputs = [];
   const navigation = useNavigate();
   const { setAuthenticated } = useAuth();
@@ -58,6 +59,7 @@ export default function Form(props) {
           setAuthenticated(true);
           return navigation("/");
         }
+
         setError(response.erro)
         setAuthenticated(false)
 
@@ -108,7 +110,7 @@ export default function Form(props) {
           </div>
          <h5>{error}</h5>
           <button onClick={handleClick} className={styles.button}>
-            Cadastrar
+            {props.btnText}
           </button>
           <Link className={styles.esq} to={props.link}>
             {props.esq}
